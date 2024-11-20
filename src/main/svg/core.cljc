@@ -4,8 +4,10 @@
 (defn view-box [x y w h]
   (str x " " y " " w " " h))
 
-(defn translate [x y]
-  (str "translate(" x "," y ")"))
+(defn translate
+  ([[x y]] (translate x y))
+  ([x y]
+   (str "translate(" x "," y ")")))
 
 (defn rotate [d]
   (str "rotate(" d ")"))
